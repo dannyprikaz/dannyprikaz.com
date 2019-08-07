@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Add the slick-theme.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="bower_components/slick-carousel/slick/slick-theme.css"/>
+<!-- Add the slick.css if you want default styling -->
+<link rel="stylesheet" type="text/css" href="bower_components/slick-carousel/slick/slick.css"/>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<style>
+@font-face {
+    font-family: Louis;
+    src: url("fonts/louis_george_caf/Louis George Cafe.ttf");
+}
+@font-face {
+  font-family: Militech;
+  src: url("fonts/militech/militech_r_2019-04-13.ttf")
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: Louis, Arial, sans-serif;
+  text-align: center;
+  color: #333;
+  background-color: #fffaee;
+}
+h1 {
+  font-family: Militech, Arial, sans-serif;
+}
+p {
+  font-size: 20px;
+}
+.Header {
+  width: 100%;
+  height: 400px;
+  background: #333;
+}
+.Header h1 {
+  font-size: 150px;
+  color: white;
+}
+a.Jump {
+  position: relative;
+  top: -40px;
+}
+#navbar {
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+  z-index:1;
+}
+#navbar a {
+  width: 100%;
+  float: left;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.navbar-content {
+  display: none;
+  position: static;
+  z-index: 1;
+}
+#navbar:hover .navbar-content {
+  display: block;
+}
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.parallax {
+  background-image: url("img/IMG_4196.jpg");
+  width: 100%;
+  height: 400px;
+  position: relative;
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.ContentContainer {
+  padding: 80px 0 80px 0;
+}
+#aboutSect {
+  overflow: hidden;
+}
+.AboutIcons {
+  float:left;
+  width: 40%;
+  text-align: center;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+.AboutIcons > div >  div {
+  position: relative;
+  display: inline-block;
+  margin: 0px;
+  width: 50%;
+  padding-top: 50%;
+  vertical-align: bottom;
+  background-color: #333;
+}
+.AboutIcons img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -35%;
+  margin-left: -35%;
+  height: 70%;
+}
+.AboutIcons h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -50%;
+  margin-top: -16px;
+  width: 100%;
+  color: #ffffff;
+  display: none;
+}
+.AboutDescript {
+  width: 60%;
+  float: left;
+}
+.AboutDescript > div {
+  display:none;
+  padding: 0 5% 0 5%
+}
+#slide {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.Resume {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  #navbar a {
+      width: auto;
+  }
+  .navbar-content {
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+<div id="navbar">
+  <a>MENU</a>
+  <div class="navbar-content">
+    <a class="navbar-link" href="#home">Home</a>
+    <a class="navbar-link" href="#pictures">Pictures</a>
+    <a class="navbar-link" href="#news">News</a>
+    <a class="navbar-link" href="#about">About</a>
+    <a class="navbar-link" href="#videos">Videos</a>
+    <a class="navbar-link" href="#resume">Resume</a>
+    <a class="navbar-link" href="#contact">Contact</a>
+  </div>
+</div>
+<a id="home" class="Jump"></a>
+<div class="Header">
+  <div style="position:absolute;text-align:center;width:100%;height:400px;clip:rect(0,auto,auto,0)">
+    <h1 style="position:fixed;text-align:center">Danny Prikazsky</h1>
+  </div>
+</div>
+<div class="ContentContainer" id="picturesSect">
+  <a id="pictures" class="Jump"></a>
+  <h1>Pictures</h1>
+  <div class="CarouselContainer">
+    <div id="slide" data-slick='{"slidesToShow": 1, "slidesToScroll": 1, "autoplay": true, "centerMode": true, "variableWidth": true, "arrows": false}'>
+      <div><img src="img/look3.jpg" height="500px"></img></div>
+      <div><img src="img/IMG_0425.jpg" height="500px"></img></div>
+      <div><img src="img/friendly_teacher.jpg" height="500px"></img></div>
+      <div><img src="img/corporate_serious_portrait.jpg" height="500px"></img></div>
+      <div><img src="img/look1.jpg" height="500px"></img></div>
+      <div><img src="img/img_8709.jpg" height="500px"></img></div>
+    </div>
+  </div>
+</div>
+<div class="parallax"></div>
+<div class="ContentContainer" id="newsSect">
+  <a id="news" class="Jump"></a>
+  <h1>News</h1>
+  <p>Right now, you can watch Danny every Wednesday night at 9/8c on MTV's Are You the One?</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="parallax" style="background-image:url('img/7A5FC316-51E2-45A4-A83C-64AC40899953.JPG')"></div><div id="aboutSect">
+  <a id="about" class="Jump"></a>
+  <div class="AboutIcons">
+    <div>
+      <div id="actIcon" onclick="selectAbout('act')" onmouseover="lighten('act')" onmouseout="darken('act')"><img src="icons/actor_icon.png" style="display:none;"></img><h1 style="display:block;">Actor</h1></div
+      ><div id="writIcon" onclick="selectAbout('writ')" onmouseover="lighten('writ')" onmouseout="darken('writ')"><img src="icons/writer_icon.png"></img><h1>Writer</h1></div>
+    </div>
+    <div>
+      <div id="impIcon" onclick="selectAbout('imp')" onmouseover="lighten('imp')" onmouseout="darken('imp')"><img src="icons/improv_icon.png"></img><h1>Improviser</h1></div
+      ><div id="hostIcon" onclick="selectAbout('host')" onmouseover="lighten('host')" onmouseout="darken('host')"><img src="icons/host_icon.png"></img><h1>Host</h1></div>
+    </div>
+  </div>
+  <div class="AboutDescript">
+    <h1>About</h1>
+    <div id="actAbout" style="display:block">
+      <h2>Actor</h2>
+      <p>Danny graduated from Oberlin College with High Honors in Theater.</p>
+    </div>
+    <div id="writAbout">
+      <h2>Writer</h2>
+      <p>
+        Danny studied creative writing at Oberlin College where he focused on
+        poetry. He has since refocused his writing ambitions onto screenplays.
+        He is writing a web series with his writing partner, Dewey Cassady.
+      </p>
+    </div>
+    <div id="impAbout">
+      <h2>Improviser</h2>
+      <p>
+        Danny has been a member of the Los Angeles improv scene for two and a
+        half years now. He has performed at UCB, iO West, Second City
+        Hollywood, you name it. He's been on house teams at LA Connection
+        Comedy, Second City, and The Improv Space. You can see him perform on
+        any given Friday with his team, Hot for the Rent, at the Improv Space
+        in Westwood at 8 PM.
+      </p>
+    </div>
+    <div id="hostAbout">
+      <h2>Host</h2>
+      <p>Danny hosts the online, streaming game show, Whodunnit League.</p>
+    </div>
+  </div>
+</div>
+<div class="parallax"  style="background-image:url('img/knowing_stuff.GIF');background-position:center;"></div>
+<div class="ContentContainer" id="videosSect">
+  <a id="videos" class="Jump"></a>
+  <h1>Videos</h1>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/cQO4MMrE_jI?start=5" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div class="parallax" style="background-image:url('img/ec4a0137.JPG');"></div>
+<div class="ContentContainer" id="resumeSect">
+  <a id="resume" class="Jump"></a>
+  <h1>Resume</h1>
+  <img class="Resume" src="img/resume.png" width="100%"></img>
+</div>
+<div class="parallax" style="background-image:url('img/IMG_4158.JPG');"></div>
+<div class="ContentContainer" id="contactSect">
+  <a id="contact" class="Jump"></a>
+  <h1>Contact</h1>
+  <p>Email: dannyp.entertainment@gmail.com</p>
+</div>
+
+<script>
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-60px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+var selected;
+
+function selectAbout(clicked) {
+  selected = clicked
+  $( "div.AboutDescript" ).find( "div" ).css( "display", "none");
+  $( "div.AboutIcons" ).find( "img" ).css("display", "block");
+  $( "div.AboutIcons" ).find( "h1" ).css("display", "none");
+  $( "div.AboutIcons" ).children().find( "div" ).css("background-color", "#333");
+  $( "#" + selected + "Icon" ).find( "img" ).css("display", "none");
+  $( "#" + selected + "Icon" ).find( "h1" ).css("display", "block");
+  $( "#" + selected + "Icon" ).css("background-color", "#555");
+  $( "#" + selected + "About").css("display", "block");
+}
+
+function lighten(hovered) {
+  if (hovered === selected) {
+    $( "#" + hovered + "Icon" ).css("background-color", "#777");
+  } else {
+    $( "#" + hovered + "Icon" ).css("background-color", "#555");
+  }
+}
+
+function darken(hovered) {
+  if (hovered === selected) {
+    $( "#" + hovered + "Icon" ).css("background-color", "#555");
+  } else {
+    $( "#" + hovered + "Icon" ).css("background-color", "#333");
+  }
+}
+
+selectAbout("act");
+
+</script>
+<script type="text/javascript" src="bower_components/slick-carousel/slick/slick.js"></script>
+    <script>
+        $( "#slide" ).slick()
+    </script>
+
+</body>
+</html>
