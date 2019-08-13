@@ -25,7 +25,7 @@
 <a id="home" class="Jump"></a>
 <div class="Header">
   <div style="position:absolute;text-align:center;width:100%;height:400px;clip:rect(0,auto,auto,0)">
-    <h1 style="position:fixed;text-align:center">Danny Prikazsky</h1>
+    <h1>Danny Prikazsky</h1>
   </div>
 </div>
 <div class="ContentContainer" id="picturesSect">
@@ -52,7 +52,7 @@
   <a id="about" class="Jump"></a>
   <div class="AboutIcons">
     <div>
-      <div id="actIcon" onclick="selectAbout('act')" onmouseover="lighten('act')" onmouseout="darken('act')"><img src="icons/actor_icon.png" style="display:none;"></img><h1 style="display:block;">Actor</h1></div
+      <div id="actIcon" style="background-color:#555" onclick="selectAbout('act')" onmouseover="lighten('act')" onmouseout="darken('act')"><img src="icons/actor_icon.png" style="display:none;"></img><h1 style="display:block;">Actor</h1></div
       ><div id="writIcon" onclick="selectAbout('writ')" onmouseover="lighten('writ')" onmouseout="darken('writ')"><img src="icons/writer_icon.png"></img><h1>Writer</h1></div>
     </div>
     <div>
@@ -125,7 +125,7 @@ var currentScrollPos = window.pageYOffset;
   prevScrollpos = currentScrollPos;
 }
 
-var selected;
+var selected = "act";
 
 function selectAbout(clicked) {
   selected = clicked
@@ -154,8 +154,6 @@ function darken(hovered) {
     $( "#" + hovered + "Icon" ).css("background-color", "#333");
   }
 }
-
-selectAbout("act");
 
 </script>
 <script type="text/javascript" src="bower_components/slick-carousel/slick/slick.js"></script>
